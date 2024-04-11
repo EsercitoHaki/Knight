@@ -46,7 +46,7 @@ public class PlayerMoveming : MonoBehaviour
     void Jump()
     {
         bool checkPlayerGround = myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground"));
-        myAnimator.SetBool("isJumping", checkPlayerGround);
+        myAnimator.SetBool("isJumping", !checkPlayerGround);
     }
 
     void Run()
